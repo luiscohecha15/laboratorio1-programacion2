@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab1.VotationController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/candi1.png" />
+               </image></ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="350.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/candi2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="BtnVotar1" layoutX="179.0" layoutY="300.0" mnemonicParsing="false" onAction="#BtnVotar1OnAction" text="Votar" />
+            <Button fx:id="BtnVotar2" layoutX="400.0" layoutY="300.0" mnemonicParsing="false" onAction="#BtnVotar2OnAction" text="Votar" />
+            <Label layoutX="169.0" layoutY="58.0" text="Candidato 1" />
+            <Label layoutX="393.0" layoutY="58.0" text="Candidato 2" />
+            <Button fx:id="comeBackBtn" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" text="Regresar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
