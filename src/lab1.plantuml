@@ -1,0 +1,40 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class HomeApplication {
+  + start(Stage): void
+  + main(String[]): void
+}
+class HomeController {
+  - TxtIngreso: TextField
+  - stage: Stage
+  # IngresoBtnClick(ActionEvent): void
+  + setStage(Stage): void
+}
+class User {
+  - id: String
+  - userName: String
+  - voto: boolean
+  + setUserName(String): void
+  + setId(String): void
+  + isVoto(): boolean
+  + setVoto(boolean): void
+  + getId(): String
+  + getUserName(): String
+}
+class VotationController {
+  - homeController: HomeController
+  - stageInicio: Stage
+  + candidato1: int
+  + candidato2: int
+  - comeBackBtn: Label
+  # comeBackBtnOnAction(): void
+  + BtnVotar2OnAction(ActionEvent): void
+  + BtnVotar1OnAction(ActionEvent): void
+}
+
+VotationController "1" *-[#595959,plain]-> "homeController\n1" HomeController     
+@enduml
